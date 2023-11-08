@@ -4,7 +4,7 @@ import "github.com/google/uuid"
 
 type Payment struct {
 	Transaction  Order     `json:"transaction"`
-	RequestId    uuid.UUID `json:"request_id"`
+	RequestId    uuid.UUID `json:"-"`
 	Currency     Currency  `json:"currency"`
 	Provider     Provider  `json:"provider"`
 	Amount       int       `json:"amount"`
