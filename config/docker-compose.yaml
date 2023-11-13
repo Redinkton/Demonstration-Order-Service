@@ -3,9 +3,9 @@ services:
   postgres:
     image: postgres:15.2
     environment:
-      POSTGRES_DB: "habrdb"
-      POSTGRES_USER: "habrpguser"
-      POSTGRES_PASSWORD: "pgpwd4habr"
+      POSTGRES_DB: "service-POSTGRES_DB"
+      POSTGRES_USER: "admin"
+      POSTGRES_PASSWORD: "i871bbbda!"
     volumes:
       - .:/docker-entrypoint-initdb.d
     ports:
