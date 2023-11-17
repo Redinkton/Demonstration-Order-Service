@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"main/internal/config"
-	"main/internal/storage/postgres"
 	"os"
 
 	"github.com/nats-io/nats.go"
