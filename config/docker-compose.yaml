@@ -10,3 +10,13 @@ services:
       - .:/docker-entrypoint-initdb.d
     ports:
       - "5432:5432"
+
+  nats:
+    image: "library/nats-streaming:latest"
+    restart: "always"
+    container_name: nats-server
+    ports:
+      - 4222:${NATS_PORT1}
+      - 4222:${NATS_PORT2}
+    volumes:
+      - ./volumes/nats_data_store:/repository:Z
